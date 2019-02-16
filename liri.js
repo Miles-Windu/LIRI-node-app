@@ -9,6 +9,7 @@ var keys = require("./keys.js");
 // Linkig time formatting javacript
 var moment = require('moment');
 
+var fs = require('fs');
 // Ceates a constructor for the Spotify command. This will populate an object from the spotify information.
 // var spotify = new Spotify(keys.spotify);
 
@@ -51,7 +52,24 @@ function concertThis() {
     //axios call
     axios.get(URL)
       .then(function(response){
-        console.log(response.data)
+
+        // Makes it easy to reference the object in my script
+        var jsonData = response.data[0];
+        var time = moment(jsonData.datetime).format("dddd, MMMM Do YYYY, h:mm:ss a")
+        // gathering all my data from the response of the API
+        var showData = [
+          "\nArtist: " + term, 
+          "Venue: " + jsonData.venue.name,
+          "Location: " + jsonData.venue.city + ', ' + jsonData.venue.country,
+          "Date of Event: " + time
+        ].join('\n\n');
+
+        console.log(showData)
+
+        fs.appendFile('log.txt', showData, function (err) {
+          if (err) throw err;
+          console.log('Saved!');
+        });
     })
 
 }
