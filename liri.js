@@ -4,14 +4,15 @@ require("dotenv").config();
 
 // Links the spotify id and secret
 var keys = require("./keys.js");
-// var Spotify = require('node-spotify-API');
+
+var Spotify = require('node-spotify-api');
 
 // Linkig time formatting javacript
 var moment = require('moment');
 
 var fs = require('fs');
 // Ceates a constructor for the Spotify command. This will populate an object from the spotify information.
-// var spotify = new Spotify(keys.spotify);
+var spotify = new Spotify(keys.spotify);
 
 // Links Axios package to make calls to the API through node
 var axios = require("axios");
@@ -42,6 +43,8 @@ if(search === "do-what-it-says"){
 if(!search){
   console.log("Please input a search!")
 }
+
+// ==================================================================================================
 
 // This function makes a call the "bands in town" API. 
 function concertThis() {
@@ -74,10 +77,17 @@ function concertThis() {
 
 }
 
-// var spotifyThisSong = function(song){
+function spotifyThisSong() {
 
+  // Straight outta the docs... 
+  spotify.search({ type: 'track', query: term }, function(err, data) {
+    if (err) {
+      return console.log('Error occurred: ' + err);
+    }   
+    console.log(data);
+})
 
-// }
+}
 
 // var movieThis = function(movie){
 // axios.get("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy").then(
