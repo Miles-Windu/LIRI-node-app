@@ -33,11 +33,11 @@ if(search === "spotify-this-song"){
 }
 
 if(search === "movie-this"){
-  concertThis(term);
+  movieThis(term);
 }
 
 if(search === "do-what-it-says"){
-  concertThis(term);
+  doWhatItSays(term);
 }
 
 if(!search){
@@ -89,14 +89,37 @@ function spotifyThisSong() {
 
 }
 
-// var movieThis = function(movie){
-// axios.get("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy").then(
-//   function(response) {
-//     console.log("The movie's rating is: " + response.data.imdbRating);
-//   }
-// );
-// }
+// Function that makes a call to the "OMDB" API. 
+function movieThis(){
 
-// var doWhatItSays = function(listen){
+  // Axios call to the omdb api 
+axios.get("http://www.omdbapi.com/?t=" + term + "&y=&plot=short&apikey=706d7459").then(
+  function(response) {
+    var jsonData = response.data
 
-// }
+    // Put in the information to an array to organize the data. 
+    var showData = [
+      "\nTitle: " + jsonData.Title,
+      "Year: " + jsonData.Year, 
+      "IMDB Rating: " + jsonData.imdbRating, 
+      "Country: " + jsonData.Country,
+      "Language: " + jsonData.Language, 
+      "Plot: " + jsonData.Plot, 
+      "Actors: " + jsonData.Acotors
+    ].join('\n\n')
+
+    // Console log the data 
+    console.log(showData);
+
+    // append the information to the log.txt file 
+    fs.appendFile('log.txt', showData, function (err) {
+      if (err) throw err;
+      console.log('Saved!');
+    });
+  }
+);
+}
+
+var doWhatItSays = function(listen){
+
+}
