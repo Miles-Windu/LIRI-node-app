@@ -82,13 +82,26 @@ function concertThis() {
 function spotifyThisSong() {
 
   // Straight outta the docs... 
-  spotify.search({ type: 'track', query: term }, function(err, data) {
-    if (err) {
-      return console.log('Error occurred: ' + err);
-    }   
-    console.log(data);
-})
+  spotify.search({ type: 'track', query: term, limit: 1 })
+  .then(function(response) {
 
+    // renaming the path to the item in the response object
+    var jsonData = response.tracks.items[0]
+
+    // organizing the data into an array to call and display in the terminal and txt file. 
+    var showData = [
+      "Artist: " + jsonData.album.artist.name,
+      "Song Name: " + term, 
+      "Preview: " + jsonData.preview_url, 
+      "Album Title: " + jsonData.album.name
+
+    ].join("\n\n");
+    // log the data in the terminal to make sure everything is solid. 
+    console.log(showData);
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
 }
 
 // Function that makes a call to the "OMDB" API. 
