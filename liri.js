@@ -62,7 +62,8 @@ function concertThis() {
         var divider = "\n" + "-------------------------------------------------" + "\n";
         // gathering all my data from the response of the API
         var showData = [
-          "\nArtist: " + term, 
+          "\nCommand: " + search,
+          "Artist: " + term, 
           "Venue: " + jsonData.venue.name,
           "Location: " + jsonData.venue.city + ', ' + jsonData.venue.country,
           "Date of Event: " + time,
@@ -79,6 +80,7 @@ function concertThis() {
 
 }
 
+// This function makes a call to the "node-spotify-api" 
 function spotifyThisSong() {
 
   // Straight outta the docs... 
@@ -86,22 +88,33 @@ function spotifyThisSong() {
   .then(function(response) {
 
     // renaming the path to the item in the response object
-    var jsonData = response.tracks.items[0]
+    var jsonData = response.tracks.items[0].album
 
+    var divider = "\n" + "-------------------------------------------------" + "\n";
     // organizing the data into an array to call and display in the terminal and txt file. 
     var showData = [
-      "Artist: " + jsonData.album.artist.name,
+      "\nCommand: " + search, 
+      "Artist: " + jsonData.artists[0].name,
       "Song Name: " + term, 
-      "Preview: " + jsonData.preview_url, 
-      "Album Title: " + jsonData.album.name
+      "Preview: " + jsonData.external_urls.spotify, 
+      "Album: " + jsonData.name,
+      divider
 
     ].join("\n\n");
+
     // log the data in the terminal to make sure everything is solid. 
     console.log(showData);
+
+    // log data to the txt file. 
+    fs.appendFile('log.txt', showData, function (err) {
+      if (err) throw err;
+      console.log('Saved!');
+    });
   })
   .catch(function(err) {
     console.log(err);
   });
+
 }
 
 // Function that makes a call to the "OMDB" API. 
@@ -118,7 +131,8 @@ axios.get("http://www.omdbapi.com/?t=" + term + "&y=&plot=short&apikey=706d7459"
     var divider = "\n" + "-------------------------------------------------" + "\n";
     // Put in the information to an array to organize the data. 
     var showData = [
-      "\nTitle: " + jsonData.Title,
+      "\nCommand: " + search,
+      "Title: " + jsonData.Title,
       "Year: " + jsonData.Year, 
       "IMDB Rating: " + jsonData.imdbRating, 
       "Country: " + jsonData.Country,

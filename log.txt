@@ -1,56 +1,5 @@
-Artist: Maroon 5
 
-Venue: Brisbane Entertainment Centre
-
-Location: Brisbane, Australia
-
-Date of Event: Tuesday, February 19th 2019, 7:00:50 pm
-
-
--------------------------------------------------
-
-Artist: Drake
-
-Venue: Manchester Arena
-
-Location: Manchester, United Kingdom
-
-Date of Event: Sunday, March 10th 2019, 12:00:00 am
-
-
--------------------------------------------------
-
-Artist: Erykah Badu
-
-Venue: Boardwalk Hall
-
-Location: Atlantic City, United States
-
-Date of Event: Saturday, February 16th 2019, 8:00:00 pm
-
-
--------------------------------------------------
-Artist: Mos Def
-
-Venue: Harvard Athletic Complex
-
-Location: Boston, United States
-
-Date of Event: Friday, May 24th 2019, 2:30:00 pm
-
-
--------------------------------------------------
-Artist: Puddle of Mudd
-
-Venue: The Odeon Concert Club
-
-Location: Cleveland, United States
-
-Date of Event: Friday, March 8th 2019, 6:30:00 pm
-
-
--------------------------------------------------
-
+Command: movie-this
 
 Title: Roots
 
@@ -65,56 +14,6 @@ Language: English
 Plot: A dramatization of author Alex Haley's family line from ancestor Kunta Kinte's enslavement to his descendants' liberation.
 
 Actors: Robert Reed, John Amos, Louis Gossett Jr., Lynda Day George
-
-
--------------------------------------------------
-
-Title: Iron Man
-
-Year: 2008
-
-IMDB Rating: 7.9
-
-Country: USA
-
-Language: English, Persian, Urdu, Arabic, Hungarian
-
-Plot: After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.
-
-Actors: Robert Downey Jr., Terrence Howard, Jeff Bridges, Gwyneth Paltrow
-
-
--------------------------------------------------
-Title: Ted
-
-Year: 2012
-
-IMDB Rating: 6.9
-
-Country: USA
-
-Language: English, Japanese
-
-Plot: John Bennett, a man whose childhood wish of bringing his teddy bear to life came true, now must decide between keeping the relationship with the bear or his girlfriend, Lori.
-
-Actors: Mark Wahlberg, Mila Kunis, Seth MacFarlane, Joel McHale
-
-
--------------------------------------------------
-
-Title: Mr. Nobody
-
-Year: 2009
-
-IMDB Rating: 7.8
-
-Country: Belgium, Germany, Canada, France, USA, UK
-
-Language: English, Mohawk
-
-Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
-
-Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
 
 
 -------------------------------------------------
