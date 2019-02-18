@@ -92,6 +92,10 @@ function spotifyThisSong() {
 // Function that makes a call to the "OMDB" API. 
 function movieThis(){
 
+    // If there is no search term then it will default to Mr. Nobody.
+  if(!term){
+    term = "Mr. Nobody"
+  }
   // Axios call to the omdb api 
 axios.get("http://www.omdbapi.com/?t=" + term + "&y=&plot=short&apikey=706d7459").then(
   function(response) {
@@ -111,8 +115,10 @@ axios.get("http://www.omdbapi.com/?t=" + term + "&y=&plot=short&apikey=706d7459"
     // Console log the data 
     console.log(showData);
 
+    var divider = "\n" + "--------------" + "\n";
+
     // append the information to the log.txt file 
-    fs.appendFile('log.txt', showData, function (err) {
+    fs.appendFile('log.txt', showData, divider, function (err) {
       if (err) throw err;
       console.log('Saved!');
     });
@@ -120,6 +126,7 @@ axios.get("http://www.omdbapi.com/?t=" + term + "&y=&plot=short&apikey=706d7459"
 );
 }
 
-var doWhatItSays = function(listen){
+function doWhatItSays() {
+
 
 }
