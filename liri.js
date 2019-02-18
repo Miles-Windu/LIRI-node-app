@@ -58,13 +58,15 @@ function concertThis() {
 
         // Makes it easy to reference the object in my script
         var jsonData = response.data[0];
-        var time = moment(jsonData.datetime).format("dddd, MMMM Do YYYY, h:mm:ss a")
+        var time = moment(jsonData.datetime).format("dddd, MMMM Do YYYY, h:mm:ss a");
+        var divider = "\n" + "-------------------------------------------------" + "\n";
         // gathering all my data from the response of the API
         var showData = [
           "\nArtist: " + term, 
           "Venue: " + jsonData.venue.name,
           "Location: " + jsonData.venue.city + ', ' + jsonData.venue.country,
-          "Date of Event: " + time
+          "Date of Event: " + time,
+          divider
         ].join('\n\n');
 
         console.log(showData)
@@ -100,7 +102,7 @@ function movieThis(){
 axios.get("http://www.omdbapi.com/?t=" + term + "&y=&plot=short&apikey=706d7459").then(
   function(response) {
     var jsonData = response.data
-
+    var divider = "\n" + "-------------------------------------------------" + "\n";
     // Put in the information to an array to organize the data. 
     var showData = [
       "\nTitle: " + jsonData.Title,
@@ -109,16 +111,17 @@ axios.get("http://www.omdbapi.com/?t=" + term + "&y=&plot=short&apikey=706d7459"
       "Country: " + jsonData.Country,
       "Language: " + jsonData.Language, 
       "Plot: " + jsonData.Plot, 
-      "Actors: " + jsonData.Acotors
+      "Actors: " + jsonData.Actors,
+      divider
     ].join('\n\n')
 
     // Console log the data 
     console.log(showData);
 
-    var divider = "\n" + "--------------" + "\n";
+    
 
     // append the information to the log.txt file 
-    fs.appendFile('log.txt', showData, divider, function (err) {
+    fs.appendFile('log.txt', showData, function (err) {
       if (err) throw err;
       console.log('Saved!');
     });
