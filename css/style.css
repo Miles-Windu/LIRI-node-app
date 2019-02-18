@@ -1,0 +1,9 @@
+body {
+    background-color: slategray;
+}
+
+img {
+    height: 400px;
+    width: 500px; 
+    margin: 20px; 
+}

@@ -17,3 +17,138 @@ Actors: Robert Reed, John Amos, Louis Gossett Jr., Lynda Day George
 
 
 -------------------------------------------------
+
+Command: movie-this
+
+Title: Roots
+
+Year: 1977
+
+IMDB Rating: 8.3
+
+Country: USA
+
+Language: English
+
+Plot: A dramatization of author Alex Haley's family line from ancestor Kunta Kinte's enslavement to his descendants' liberation.
+
+Actors: Robert Reed, John Amos, Louis Gossett Jr., Lynda Day George
+
+
+-------------------------------------------------
+
+Command: movie-this
+
+Title: Ted
+
+Year: 2012
+
+IMDB Rating: 6.9
+
+Country: USA
+
+Language: English, Japanese
+
+Plot: John Bennett, a man whose childhood wish of bringing his teddy bear to life came true, now must decide between keeping the relationship with the bear or his girlfriend, Lori.
+
+Actors: Mark Wahlberg, Mila Kunis, Seth MacFarlane, Joel McHale
+
+
+-------------------------------------------------
+
+Command: movie-this
+
+Title: Undercover Brother
+
+Year: 2002
+
+IMDB Rating: 5.8
+
+Country: USA
+
+Language: English
+
+Plot: When "The Man" tries to derail a black candidate's presidential campaign, Undercover Brother and his fellow secret agents come to the rescue.
+
+Actors: Eddie Griffin, Chris Kattan, Denise Richards, Aunjanue Ellis
+
+
+-------------------------------------------------
+
+Command: spotify-this-song
+
+Artist: R. Kelly
+
+Song Name: I believe I can fly
+
+Preview: https://open.spotify.com/album/4yRYsQZfQpzkoVWH2XCX66
+
+Album: R.
+
+
+-------------------------------------------------
+
+Command: spotify-this-song
+
+Artist: Guns N' Roses
+
+Song Name: Welcome to the jungle
+
+Preview: https://open.spotify.com/album/5JKFiC2WVi9HtvJEm8CUB8
+
+Album: Appetite For Destruction
+
+
+-------------------------------------------------
+
+Command: spotify-this-song
+
+Artist: Aerosmith
+
+Song Name: Dream On
+
+Preview: https://open.spotify.com/album/19lEZSnCCbVEkKchoPQWDZ
+
+Album: Aerosmith
+
+
+-------------------------------------------------
+
+Command: concert-this
+
+Artist: Drake
+
+Venue: Manchester Arena
+
+Location: Manchester, United Kingdom
+
+Date of Event: Sunday, March 10th 2019, 12:00:00 am
+
+
+-------------------------------------------------
+
+Command: concert-this
+
+Artist: Erykah Badu
+
+Venue: Mana Wynwood Convention Center
+
+Location: Miami, United States
+
+Date of Event: Monday, February 18th 2019, 5:00:00 pm
+
+
+-------------------------------------------------
+
+Command: concert-this
+
+Artist: Puddle of Mudd
+
+Venue: The Odeon Concert Club
+
+Location: Cleveland, United States
+
+Date of Event: Friday, March 8th 2019, 6:30:00 pm
+
+
+-------------------------------------------------
